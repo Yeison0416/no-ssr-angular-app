@@ -1,6 +1,10 @@
 # no-ssr-angular-app
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+This project was originally generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19, but has been extended to use additional tools and custom configurations via Webpack. This allows for more advanced build customizations and features beyond the standard Angular CLI setup.
+
+## Project Purpose
+
+This repository serves as an initial setup (starter template) for Angular projects. You can use it as a foundation to quickly bootstrap new Angular applications with enhanced build capabilities and custom tooling out of the box.
 
 ## Development server
 
@@ -9,6 +13,8 @@ To start a local development server, run:
 ```bash
 ng serve
 ```
+
+When running `ng serve`, the application uses the custom Webpack configuration for development. This enables advanced build features and custom tooling during local development.
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
@@ -28,32 +34,21 @@ ng generate --help
 
 ## Building
 
-To build the project run:
+You can build the project using the following commands. These commands leverage the custom Webpack setup for enhanced build flexibility:
 
 ```bash
+# Standard build (default configuration)
 ng build
+
+# Development build (uses custom Webpack setup)
+npm run build:dev
+
+# Production build (uses custom Webpack setup)
+npm run build:prod
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- `ng build` or `npm run build`: Compiles the project using the default configuration.
+- `npm run build:dev`: Builds the project using the development configuration and the custom Webpack setup, optimized for faster builds and easier debugging.
+- `npm run build:prod`: Builds the project using the production configuration and the custom Webpack setup, optimized for performance and deployment.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+All build artifacts are stored in the `dist/` directory.
