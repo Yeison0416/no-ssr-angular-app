@@ -2,15 +2,24 @@
 root = true
 
 [*]
-charset = utf-8
-indent_style = space
-indent_size = 2
+end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+charset = utf-8+
 
-[*.ts]
+
+
+[*.{js,ts}]
 quote_type = single
 ij_typescript_use_double_quotes = false
+indent_style = space
+indent_size = 4
+
+[*.{html,scss}]
+indent_style = tab
+indent_size = 2
 
 [*.md]
 max_line_length = off
