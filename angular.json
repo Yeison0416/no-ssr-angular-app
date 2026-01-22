@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "my-first-angular-app": {
+        "no-ssr-angular-app": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -21,7 +21,7 @@
                         "customWebpackConfig": {
                             "path": "./webpack.common.js"
                         },
-                        "outputPath": "dist/my-first-angular-app",
+                        "outputPath": "dist/no-ssr-angular-app",
                         "index": "src/index.html",
                         "polyfills": [
                             "zone.js"
@@ -67,10 +67,10 @@
                     "builder": "@angular-builders/custom-webpack:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "my-first-angular-app:build:production"
+                            "buildTarget": "no-ssr-angular-app:build:production"
                         },
                         "development": {
-                            "buildTarget": "my-first-angular-app:build:development"
+                            "buildTarget": "no-ssr-angular-app:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
